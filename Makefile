@@ -1,5 +1,5 @@
 
-all: clean start create-base-tables add-data run
+all: clean start create-base-tables add-data seed run
 
 clean: 
 	docker-compose stop && docker-compose rm -f
@@ -18,3 +18,6 @@ add-data:
 
 run:
 	dbt run --profiles-dir dbt-profiles/
+
+seed: 
+	dbt seed --profiles-dir dbt-profiles/
