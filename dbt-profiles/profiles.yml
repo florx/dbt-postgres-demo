@@ -1,0 +1,12 @@
+house_price_data:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: dbt_user
+      pass: dbt_pass
+      port: 5432
+      dbname: dbt_db
+      schema: dbt_db
+      threads: 4

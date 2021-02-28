@@ -1,0 +1,4 @@
+/dbt-profiles/.user.yml
+target/
+logs/
+/setup/prices-data-2020.csv
