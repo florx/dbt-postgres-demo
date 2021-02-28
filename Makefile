@@ -16,8 +16,8 @@ add-data:
 	cat setup/prices-data-2020.csv.gz | gunzip -c > setup/prices-data-2020.csv
 	PGPASSWORD=dbt_pass psql -h localhost -U dbt_user -d dbt_db -a -f setup/prices-import-data.sql
 
-run:
-	dbt run --profiles-dir dbt-profiles/
-
 seed: 
 	dbt seed --profiles-dir dbt-profiles/
+
+run:
+	dbt run --profiles-dir dbt-profiles/

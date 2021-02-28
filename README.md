@@ -24,6 +24,35 @@ Commands have been written and tested on MacOS Big Sur.
 * Docker Desktop & CLI tools (`docker-compose`)
 * Postgres CLI tools (`pgsql`)
 
+## Commands
+
+### $ make all
+
+Runs all of the following commands in the correct order to end up with a database, with data imported, seeds, models and everything ready to go.
+
+### $ make clean
+
+Stops and completely deletes the postgres database. Allows us to start from fresh each time if we so wish.
+
+### $ make start
+
+Starts the postgres database using `docker-compose`, it'll keep running forever until you stop it.
+
+### $ make create-base-tables
+
+This will create any base ingest tables we need to give us some starter data
+
+### $ make add-data
+
+Using the tables created previously, it ungzips our pricing data then uses `psql` to copy it into our table. There are ~650k rows so it takes a moment.
+
+### $ make seed
+
+We have some static data that is used to enrich the pricing data, in the data source it's [hardcoded to single alpha-chars](https://www.gov.uk/guidance/about-the-price-paid-data#explanations-of-column-headers-in-the-ppd), but that's not particularly useful. Using the `data/` directory, we have some CSVs that get pulled in as tables automatically.
+### $ make run
+
+This is where the magic happens, `dbt run` is called, and will create all our views/models etc automatically.
+
 ## Acknowledgements
 
 `setup/prices-data-2020.csv` is from [GOV.UK Price Paid Data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and is licensed under [Open Government Licence (OGL)](
