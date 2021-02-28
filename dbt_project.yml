@@ -13,3 +13,7 @@ snapshot-paths: ["snapshots"]
 seeds:
   house_price_data:
     schema: seeds
+
+models:
+  house_price_data:
+    schema: house_price_data

@@ -1,6 +1,6 @@
 
-CREATE SCHEMA "house_price_data";
-CREATE TABLE "house_price_data"."prices" (
+CREATE SCHEMA "raw";
+CREATE TABLE "raw"."prices" (
     transaction_id text PRIMARY KEY,
     price text,
     date_of_transfer text,

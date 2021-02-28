@@ -2,5 +2,6 @@ version: 2
 
 sources:
   - name: house_price_data
+    schema: raw
     tables:
       - name: prices
