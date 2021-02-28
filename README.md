@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I've thrown a quick demo together to help me learn about DBT with a postgres database.
+I've thrown a quick demo together to help me learn about [dbt](https://www.getdbt.com/) with a Postgres database.
 
 The demo:
 1. Starts a database (postgres)
