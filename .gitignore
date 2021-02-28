@@ -2,3 +2,4 @@
 target/
 logs/
 /setup/prices-data-2020.csv
+/.DS_Store

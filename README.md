@@ -4,6 +4,9 @@
 
 I've thrown a quick demo together to help me learn about [dbt](https://www.getdbt.com/) with a Postgres database.
 
+![Example of what you can achieve](demo.png)
+> With very little effort we've cleaned up this price data!
+
 The demo:
 1. Starts a database (postgres)
 1. Creates tables and imports a dataset
