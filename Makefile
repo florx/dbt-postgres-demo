@@ -1,3 +1,5 @@
+DBT_PARAMS=--profiles-dir dbt-profiles/
+
 
 all: clean start create-base-tables add-data seed run
 
@@ -17,7 +19,13 @@ add-data:
 	PGPASSWORD=dbt_pass psql -h localhost -U dbt_user -d dbt_db -a -f setup/prices-import-data.sql
 
 seed: 
-	dbt seed --profiles-dir dbt-profiles/
+	dbt seed $(DBT_PARAMS)
 
 run:
-	dbt run --profiles-dir dbt-profiles/
+	dbt run $(DBT_PARAMS)
+
+docs-serve:
+	dbt docs serve $(DBT_PARAMS)
+
+docs-generate:
+	dbt docs generate $(DBT_PARAMS)
